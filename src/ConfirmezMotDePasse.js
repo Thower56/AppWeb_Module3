@@ -25,7 +25,7 @@ export function ConfirmezMotDePasse() {
               onChange={e => setMotDePasse(e.target.value)} />
           </Form.Group>
 
-          {ErreurMotDePasse({ motDePasse })}
+          <ErreurMotDePasse motDePasse={motDePasse} />
 
           <Form.Group className="mb-2" controlId="formMotDepasse">
             <Form.Label>Confirmez votre mot de passe :</Form.Label>
@@ -35,7 +35,7 @@ export function ConfirmezMotDePasse() {
               onChange={e => setConfirmationMotDePasse(e.target.value)} />
           </Form.Group>
 
-          {ErreurConfirmation({ motDePasse, confirmationMotDePasse })}
+          <ErreurConfirmation motDePasse={motDePasse} confirmationMotDePasse={confirmationMotDePasse}/>
 
           <Button
             variant="primary"
